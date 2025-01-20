@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Your e-BusPass</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ccf3f3;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+      }
+
+      nav {
+        background: #fff;
+        color: #007b7f;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+
+      nav h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .form-container {
+        background: #ccf3f3;
+        padding: 2rem;
+        border-radius: 10px;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .form-container h2 {
+        color: #007b7f;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+      }
+
+      .form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      .form-container label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+        text-align: left;
+        display: block;
+      }
+      #e-BusPass {
+        background-color: #cfc9c9;
+      }
+      #e-BusPass::placeholder {
+        color: #000;
+      }
+      .form-container input[type="text"],
+      .form-container input[type="number"] {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .form-container .captcha {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .form-container .captcha img {
+        height: 60px;
+        width: 200px;
+        /* border: 1px solid #ccc; */
+        border-radius: 5px;
+      }
+
+      .form-container a {
+        background: #ff6f7f;
+        color: #fff;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .form-container a:hover {
+        background: #ff4f5f;
+      }
+
+      footer {
+        background: #007b7f;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 600px) {
+        nav h1 {
+          font-size: 1.2rem;
+        }
+
+        .form-container {
+          padding: 1.5rem;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"] {
+          font-size: 0.9rem;
+        }
+
+        .form-container a {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Home</h1>
+    </nav>
+    <main>
+      <div class="form-container">
+        <h2>Get Your e-BusPass</h2>
+        <form>
+          <div
+            class=""
+            style="width: 100%; height: 2px; background-color: #007b7f"
+          ></div>
+          <label for="e-BusPass">e-BusPass Number</label>
+          <input
+            id="e-BusPass"
+            type="number"
+            placeholder="7523102462588"
+            required
+          />
+
+          <label for="Mobile">Enter Mobile Number</label>
+          <input
+            type="text"
+            id="Mobile"
+            placeholder="Enter Mobile Number"
+            required
+          />
+
+          <div class="captcha">
+            <span><b style="font-size: larger">Captcha</b></span>
+            <img
+              src="WhatsApp Image 2025-01-19 at 13.59.07_41dcb76d.jpg"
+              alt="Captcha"
+            />
+          </div>
+
+          <label for="captcha">Type the Captcha Here</label>
+          <input type="text" id="captcha" placeholder="Type Captcha" required />
+
+          <a href="index.html">SUBMIT</a>
+          <div
+            class=""
+            style="width: 100%; height: 1px; background-color: #333"
+          ></div>
+        </form>
+      </div>
+    </main>
+    <footer>Copyright &copy; - Delhi e-Governance Society 2024</footer>
+  </body>
+</html>
